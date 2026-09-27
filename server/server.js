@@ -11,7 +11,8 @@ const conversationRoutes = require("./routes/conversationRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 
 const app = express();
-
+console.log("JWT_SECRET available:", Boolean(process.env.JWT_SECRET));
+console.log("GROQ_API_KEY available:", Boolean(process.env.GROQ_API_KEY));
 // Serve frontend files
 app.use(express.static("client"));
 
