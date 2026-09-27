@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Conversational Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Authentication Screen -->
+    <div id="authScreen" class="auth-screen">
+
+        <div class="auth-card">
+
+            <div class="auth-logo">
+                🤖
+            </div>
+
+            <h1>AI Conversational Agent</h1>
+
+            <p class="auth-subtitle">
+                AI with persistent memory
+            </p>
+
+
+            <!-- Login Form -->
+            <div id="loginForm">
+
+                <h2>Welcome Back</h2>
+
+                <p class="form-description">
+                    Sign in to continue your conversations.
+                </p>
+
+                <input type="text" id="loginUsername" placeholder="Username" autocomplete="username">
+
+                <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password">
+
+                <button id="loginBtn" class="auth-btn">
+                    Login
+                </button>
+
+                <p id="loginError" class="auth-error"></p>
+
+                <p class="switch-form">
+                    Don't have an account?
+                    <button id="showRegisterBtn" class="link-btn">
+                        Register
+                    </button>
+                </p>
+
+            </div>
+
+
+            <!-- Register Form -->
+            <div id="registerForm" class="hidden">
+
+                <h2>Create Account</h2>
+
+                <p class="form-description">
+                    Create your account to get started.
+                </p>
+
+                <input type="text" id="registerUsername" placeholder="Choose a username" autocomplete="username">
+
+                <input type="password" id="registerPassword" placeholder="Choose a password"
+                    autocomplete="new-password">
+
+                <input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="new-password">
+
+                <button id="registerBtn" class="auth-btn">
+                    Create Account
+                </button>
+
+                <p id="registerError" class="auth-error"></p>
+
+                <p class="switch-form">
+                    Already have an account?
+                    <button id="showLoginBtn" class="link-btn">
+                        Login
+                    </button>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Application -->
+    <div id="app" class="app hidden">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <h2>AI Agent</h2>
+                <p>Persistent Memory</p>
+            </div>
+
+            <button id="newConversationBtn" class="new-chat-btn">
+                + New Conversation
+            </button>
+
+            <div class="conversation-section">
+
+                <h3>Conversations</h3>
+
+                <div id="conversationList">
+                </div>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <span id="usernameDisplay">
+                    Not logged in
+                </span>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+
+            <header class="chat-header">
+
+                <div>
+
+                    <h1>
+                        AI Conversational Agent
+                    </h1>
+
+                    <p>
+                        AI with persistent memory
+                    </p>
+
+                </div>
+
+                <div id="status" class="status">
+                    ● Online
+                </div>
+
+            </header>
+
+
+            <!-- Messages -->
+            <section id="messages" class="messages">
+
+                <div class="welcome-message">
+
+                    <h2>
+                        👋 Welcome!
+                    </h2>
+
+                    <p>
+                        Start a conversation with your AI assistant.
+                    </p>
+
+                    <p class="memory-info">
+                        The assistant can remember useful information
+                        across conversations.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Message Input -->
+            <div class="input-area">
+
+                <textarea id="messageInput" placeholder="Type your message..." rows="1"></textarea>
+
+                <button id="sendBtn">
+                    Send
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
