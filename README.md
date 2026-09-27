@@ -106,6 +106,20 @@ The database is stored on a Railway persistent volume, allowing stored memories 
 
 ---
 
+## 🖥️ Application Screenshots
+
+### 🔐 Login & Authentication
+
+![Login Screen](docs/login.png)
+
+### 🧠 Persistent Memory in Action
+
+![Persistent Memory](docs/chat-memory.png)
+
+The second screenshot demonstrates the application's persistent-memory capability: information learned in a previous interaction can be retrieved and used in a later conversation.
+
+---
+
 ## 🛠️ Technology Stack
 
 ### Frontend
@@ -194,7 +208,9 @@ ai-conversational-agent/
 │   └── setup.js
 │
 ├── docs/
-│   └── architecture.png
+│   ├── architecture.png
+│   ├── login.png
+│   └── chat-memory.png
 │
 ├── .gitignore
 ├── package.json
