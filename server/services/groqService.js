@@ -1,12 +1,14 @@
 const Groq = require("groq-sdk");
 
-const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY
-});
-
+const groq = process.env.GROQ_API_KEY
+    ? new Groq({ apiKey: process.env.GROQ_API_KEY })
+    : null;
 
 const generateAIResponse = async (messages, memories = []) => {
     try {
+        if (!groq) {
+           throw new Error("GROQ_API_KEY is not available");
+        }
         let systemMessage = {
             role: "system",
             content: `
