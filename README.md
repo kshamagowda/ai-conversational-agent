@@ -100,6 +100,10 @@ The database is stored on a Railway persistent volume, allowing stored memories 
                                       └──────────────────┘
 ```
 
+### Architecture Diagram
+
+![System Architecture](docs/architecture.png)
+
 ---
 
 ## 🛠️ Technology Stack
@@ -190,6 +194,8 @@ ai-conversational-agent/
 │   └── setup.js
 │
 ├── docs/
+│   └── architecture.png
+│
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
